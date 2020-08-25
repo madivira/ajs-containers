@@ -12,7 +12,9 @@ export default class Team {
   }
 
   addAll(...characters) {
-    this.members = new Set([...characters]);
+    for (const character of characters) {
+      this.members.add(character);
+    }
   }
 
   toArray() {
